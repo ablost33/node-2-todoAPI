@@ -11,6 +11,10 @@ var {User} = require('./models/user');
 const {ObjectID} = require('mongodb');
 
 
+const port = process.env.PORT || 3000;
+
+
+
 
 // var otherTodo = new Todo({
 // 	text: 'Finish videos',
@@ -79,8 +83,8 @@ Todo.findById(id).then((todo) =>{
 
 
 // so now you have a basic server setup
-app.listen(3000, () =>{
-	console.log('Started on port 3000');
+app.listen(port, () =>{
+	console.log('Started on port ${port}');
 });
 
 
